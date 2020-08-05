@@ -19,7 +19,7 @@ public class PrintableTreeTest {
     @ParameterizedTest
     @MethodSource("testCases")
     public void test(String testCaseName, int[] elements, String prettyPrint) {
-        final PrintableTreeImpl tree = new PrintableTreeImpl();
+        final PrintableTree tree = PrintableTree.getInstance();
         for (int element : elements) {
             tree.add(element);
         }
